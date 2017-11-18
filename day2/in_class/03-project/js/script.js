@@ -6,33 +6,22 @@ window.addEventListener('load', function(){
 	let rightArrow = document.querySelector('.rightArrow')
 	let leftArrow = document.querySelector('.leftArrow')
 	let myCoolEarth = document.querySelector('.earth')
-	
-// Анимация по часовой
+	let Counter = 0
+
 
 	rightArrow.addEventListener('click', function(){
-	let currentAnimationPlayStatus = myCoolEarth.style.animationPlayState
+		Counter = Counter + 10
+		myCoolEarth.style.transform = 'rotate('+ Counter +'deg)'
 
-		if(currentAnimationPlayStatus != 'running'){
-			myCoolEarth.style.animationPlayState = 'running'
-		rightArrow.style.backroundImage = 'url("img/pause.png")'
-		} else {
-			myCollEarth.style.currentAnimationPlayStatus = 'paused'
-			this.style.backroundImage = 'url("img/rotate_right_arrow.png")'
-		}
 	})
-
-// Анимация в обратку
-
-	rightArrow.addEventListener('click', function(){
-	
-
 
 
 	leftArrow.addEventListener('click', function(){
-		Counter = Counter-10
+		Counter = Counter - 10
 		myCoolEarth.style.transform = 'rotate(' + Counter + 'deg)'
 	})
 
+	//кнопка Домой
 	const homeBtn = document.querySelector('.home')	
 	homeBtn.addEventListener('click', function(){
 		window.location = ('file:///Users/natashadunaeva/Desktop/tulers/day1_Home.html')
