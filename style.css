@@ -1,0 +1,44 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+header, footer {
+	height: 100px; 
+	background-color: rgba(227,228,238, .9);
+}
+
+
+
+#dom {
+	width: 500px;
+}
+
+.hero {
+	height: 400px;
+
+}
+
+h1, h2, h3 {
+	font-family:'Helvetica', 'Arial', sans-serif;
+
+	font-weight: 100;
+	font-style: normal; 
+	margin-left: 16px;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+
+a {
+	text-decoration: underline;
+	font-family: sans-serif;
+	color: blue;
+	font-size: 16px;
+	line-height: 24px;
+	margin-left: 16px;
+}
+
+main {
+	min-height: 300px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Positioning</title>
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		.outer {
+			height: 500px;
+			border: 2px solid orange;
+		}
+		.inner {
+			width: 50px;
+			height: 50px;
+		}
+		.static .inner{
+			background-color: red;
+			position: static;
+		}
+		.relative .inner{
+			background-color: purple;
+			position: relative;
+			margin-top: 10px;}
+		.absolute .inner{
+			background-color: 
+			green;
+			margin-left: 10px;}
+		.fixed .inner{
+			background-color: 
+			black;
+			margin-top: 10px;}
+	</style>
+</head>
+<body>
+	<div class="outer static">
+
+		<div class="inner"></div>
+	</div>
+	<div class="outer relative">
+		<div class="inner"></div>
+	</div>
+	<div class="outer absolute">
+		<div class="inner"></div>
+	</div>
+	<div class="outer fixed">
+		<div class="inner"></div>
+	</div>
+</body>
+</html>
