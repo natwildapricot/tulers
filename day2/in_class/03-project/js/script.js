@@ -25,8 +25,6 @@ window.addEventListener('load', function(){
 	let Counter = 0
 
 
-	
-
 	rightArrow.addEventListener('click', function(){
 		Counter = Counter+10
 		myCoolEarth.style.transform = 'rotate('+ Counter + 'deg)' //'rotate()5deg' // 'rotate(5deg)'
