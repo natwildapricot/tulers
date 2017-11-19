@@ -7,8 +7,8 @@ window.addEventListener('load', function(){
 	const dragon = document.querySelector('.dragon')
 	let countPlayerId = document.querySelector('#countPlayerId')
 	let countComputerId = document.querySelector('#countComputerId')
-	CounterPlayer = 0
-	CounterComputer = 0
+	let CounterPlayer = 0
+	let CounterComputer = 0
 
 
 													//прописываем путь
