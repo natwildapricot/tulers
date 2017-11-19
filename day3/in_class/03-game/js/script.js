@@ -74,7 +74,7 @@ window.addEventListener('load', function(){
 
 			//princess
 	} else if (currentPlayerImage === princessUrl && currentComputerImage === samuraiUrl) {
-		rusult.innerHTML = 'Победил игрок. Принцесса соблазнила самурая'
+		result.innerHTML = 'Победил игрок. Принцесса соблазнила самурая'
 
 		CounterPlayer = CounterPlayer + 1 
 		countPlayerId.innerHTML = CounterPlayer
@@ -82,7 +82,7 @@ window.addEventListener('load', function(){
 
 
 	} else if (currentPlayerImage === princessUrl && currentComputerImage === dragonUrl) {
-		rusult.innerHTML = 'Победил компьютер. Дракон похитил принцессу'
+		result.innerHTML = 'Победил компьютер. Дракон похитил принцессу'
 
 		CounterComputer = CounterComputer + 1
 		countPlayerId.innerHTML = CounterPlayer
@@ -105,14 +105,14 @@ window.addEventListener('load', function(){
 
 		//dragon
 	} else if (currentPlayerImage === dragonUrl && currentComputerImage === princessUrl) {
-		rusult.innerHTML = 'Победил игрок. Дракон похитил принцессу'
+		result.innerHTML = 'Победил игрок. Дракон похитил принцессу'
 
 		CounterPlayer = CounterPlayer + 1 
 		countPlayerId.innerHTML = CounterPlayer
 		countComputerId.innerHTML = CounterComputer
-		
+
 	} else if (currentPlayerImage === dragonUrl && currentComputerImage === samuraiUrl) {
-		rusult.innerHTML = 'Победил компьютер. Самурай одолел дракона'
+		result.innerHTML = 'Победил компьютер. Самурай одолел дракона'
 
 		CounterComputer = CounterComputer + 1
 		countPlayerId.innerHTML = CounterPlayer
