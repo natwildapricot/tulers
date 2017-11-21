@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Day2</title>
+	    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+<style>
+	body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+  margin-left: 1
+}
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-left: 16px;
+
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ccc; 
+}
+
+div.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+}
+</style>
+</head>
+<body>
+	<div >
+		
+		
+
+	<div style="margin-left: 16px;" >
+		<h1>Основы веб программирования. Day 2</h1>
+		<h2>Система объектов. Продолжение</h2>
+		<h3>Тэги:</h3>
+
+<button class="accordion">Линейные тэги</button>
+<div class="panel">
+	 <ul>
+  		<li>img</li>
+  		<li>span</li>
+  		<li>a</li>
+  		<li>...</li>
+  	</ul>
+    <p>Занимают столько пространства, сколько требует контент. Появляются на одной строке.</p>
+
+</div>
+<button class="accordion">Блочные тэги</button>
+<div class="panel">
+   <ul>
+      <li>Все контейнеры (div, section, header)</li>
+      <li>p</li>
+      <li>a</li>
+      <li>h1, h2, h3, h4...</li>
+      <li>...</li>
+    </ul>
+    <p>Занимают всю ширину родителя. Появляются на новой строке.</p>
+
+</div>
+
+<h3>Свойство Display</h3>
+<h3>Box-sizing и отступы</h3>
+<h3>Позиционирование</h3>
+<h3>Псевдоклассы</h3>
+<h3>Трансформации</h3>
+<h2>Функции в JS</h2>
+<h2>События в JS</h2>
+<h2>JQuery</h2>
+
+</div>
+	
+
+	<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
