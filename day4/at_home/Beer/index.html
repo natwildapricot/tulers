@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+
+  		<!-- Images -->
+	<!-- Пиво -->
+	<div id="beer" style="
+		height: 800px;
+        background-image: url(img/beer.jpg);
+        display: none;
+        background-size: cover;
+        background-position: center;">
+    </div>
+    <!-- Медвежонок -->
+	<div id="bear" style="
+		height: 600px;
+		z-index: 12;
+        background-image: url(img/bear.jpg);
+        display: none;
+        background-size: cover;
+        background-position: center;">
+    </div>
+		
+
+        <!-- Button -->
+    <div style="margin-top: 300px;" class="container">
+        <button style="
+        display: block;
+        margin: auto;" 
+        type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#placeCity">Жми, уже!</button>
+    </div>
+
+   
+</div>
+	 
+    <!-- Modal -->
+<div class="modal fade" id="placeCity" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Сколько вам лет?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- INPUT -->
+        <input id="magicInput" value="5" class="form-control" placeholder="Введите ваш возраст, используя только цифры">
+        <span style="display: none;" id="NaN" >Введите число!</span>
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+        <button id="magicBtn" type="button" class="btn btn-primary">Получи результат</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js" ></script>
+</body>
+</html>
