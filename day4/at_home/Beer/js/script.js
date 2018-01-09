@@ -4,25 +4,22 @@ const magicBtn = document.getElementById('magicBtn')
 const magicInput = document.getElementById('magicInput')
 const beer = document.getElementById('beer')
 const bear = document.getElementById('bear')
-var value = document.querySelector(magicInput.value)
 // Я не знаю как мне выразить value от инпута
 
 
 // magic Button
-		magicBtn.addEventListener('click', function() {
-			// beer.style.display = 'flex'
+magicBtn.addEventListener('click', function() {
+	// beer.style.display = 'flex'
+	var value = parseInt(magicInput.value)
 
-
-
-			if (value >= 18) {
+	if (value >= 18) {
 		beer.style.display = 'flex'
+		bear.style.display = 'none'
 
-	} else (value <18) {
+	} else {
 		bear.style.display = 'flex'
-
-	
-}
-	
+		beer.style.display = 'none'
+	}
 })
 
 
