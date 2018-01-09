@@ -21,7 +21,7 @@ window.addEventListener('load', function(){
 		myCoolEarth.style.transform = 'rotate(' + Counter + 'deg)'
 	})
 
-	//кнопка Домой
+	//button Home
 	const homeBtn = document.querySelector('.home')	
 	homeBtn.addEventListener('click', function(){
 		window.location = ('file:///Users/natashadunaeva/Desktop/tulers/day1_Home.html')
