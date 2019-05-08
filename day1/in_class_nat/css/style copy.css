@@ -4,7 +4,7 @@ header {
 	border-top: 10px dashed purple;
 	border-bottom: 3px dotted rgba(255, 0, 100, .5);
 	background-color: rgba(112, 32, 32, .3);
-	background-image: url('../img/kitten.jpg');
+	background-image: url('img/kitten.jpg');
 	background-size: 100px;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -44,5 +44,4 @@ p {
 	text-transform: uppercase;
 	line-height: 50px;
 	letter-spacing: 2px;
-	background-color: yellow;
 }

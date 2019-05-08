@@ -18,10 +18,18 @@ hero.style.backgroundColor = 'purple'
 
 
 const b = document.getElementById('paragraph')
-b.style.letterSpacing = '10px'
+b.style.letterSpacing = '40px'
 
-const theColor = prompt('ВВедите цвет')
-hero.style.backgroundColor = theColor
+// const theColor = prompt('ВВедите цвет')
+// hero.style.backgroundColor = theColor
+
+
+const c = document.getElementById('paragraph')
+var newcolor=prompt('Введите цвет','')
+c.style.backgroundColor = newcolor
+
+
+console.log(newcolor)
 
 
 

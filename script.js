@@ -1,8 +1,15 @@
-console.log('I\am alive')
+var visitorName = prompt("Cosa ti chiami?", '');
+var currentName = document.getElementById('visitorName');
+currentName.innerHTML = visitorName
 
-const myName = prompt("Как твое имя?")
-const myNameContainer = document.getElementById("visitorName")
+console.log(visitorName)
 
-myNameContainer.innerHTML = myName
 
-// console.log(myName, myNameContainer)
+
+
+
+// // Получение содержимого элемента
+// var content = element.innerHTML;
+//
+// // Установка содержимого для элемента
+// element.innerHTML = content;

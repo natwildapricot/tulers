@@ -22,9 +22,9 @@ window.addEventListener('load', function(){
 	})
 
 	//button Home
-	const homeBtn = document.querySelector('.home')	
+	const homeBtn = document.querySelector('.home')
 	homeBtn.addEventListener('click', function(){
-		window.location = ('file:///Users/natashadunaeva/Desktop/tulers/day1_Home.html')
+		window.location = ('file:///Users/nataliadunaeva/Desktop/tulers_2019/index.html')
 	})
 
 
@@ -35,7 +35,7 @@ window.addEventListener('load', function(){
 	const winmodal = document.querySelector('.winmodal')
 	const crossbutton = document.querySelector('.crossbutton')
 
-	
+
 
 	circle.addEventListener('click', function(){
 	const winmodal = document.getElementById('winmodal')
@@ -45,8 +45,7 @@ window.addEventListener('load', function(){
 	crossbutton.addEventListener('click', function(){
 	const winmodal = document.getElementById('winmodal')
 		winmodal.style.display = 'none'
-	})	
-	
+	})
 
 
 
@@ -71,6 +70,5 @@ window.addEventListener('load', function(){
 
 
 
-	
-	})
 
+	})
