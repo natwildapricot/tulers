@@ -1,87 +1,39 @@
-window.addEventListener('load', function(){
+// inseriamo tutto il codice funzione in un evento caricamento
+ window.addEventListener('load',function(){
 
 
+	 let $ = function(selector){
+		 return document.querySelector(selector)
+	 }
+	 // $('.controls').style.backgroundColor = 'blue'
 
-	//рабочий код проекта
-	let rightArrow = document.querySelector('.rightArrow')
-	let leftArrow = document.querySelector('.leftArrow')
-	let myCoolEarth = document.querySelector('.earth')
-	
-// Анимация по часовой
+	 // lavoro codice di progetto
+	 //mettiamo html codice in viriabile "freccia sinistra"
+	 let leftArrow = document.querySelector('.leftArrow')
+	 let myCoolEarth = document.querySelector('.earth')
+	 let circle = document.querySelector('.circle')
+	 let winmodal = document.querySelector('.winmodal')
+	 let close = document.querySelector('.close')
+	 let pause = document.querySelector('.pause')
 
-	rightArrow.addEventListener('click', function(){
-	let currentAnimationPlayStatus = myCoolEarth.style.animationPlayState
 
-		if(currentAnimationPlayStatus != 'running'){
-			myCoolEarth.style.animationPlayState = 'running'
-		rightArrow.style.backroundImage = 'url("img/pause.png")'
-		} else {
-			myCollEarth.style.currentAnimationPlayStatus = 'paused'
-			this.style.backroundImage = 'url("img/rotate_right_arrow.png")'
-		}
+	 const homeBtn = document.querySelector('.home')
+	 homeBtn.addEventListener('click', function(){
+		 window.location = ('file:///Users/nataliadunaeva/Desktop/tulers_2019/index.html')
+	 })
+
+	 leftArrow.addEventListener('click', function(){
+		myCoolEarth.style.animationPlayState = 'running'
+		
 	})
+	 pause.addEventListener('click', function(){
+		myCoolEarth.style.animationPlayState = 'paused'
+	 })
+	 circle.addEventListener('click', function(){
+	 	winmodal.style.display = 'block'
+	 })
 
-// Анимация в обратку
-
-	rightArrow.addEventListener('click', function(){
-	
-
-
-
-	leftArrow.addEventListener('click', function(){
-		Counter = Counter-10
-		myCoolEarth.style.transform = 'rotate(' + Counter + 'deg)'
-	})
-
-	const homeBtn = document.querySelector('.home')	
-	homeBtn.addEventListener('click', function(){
-		window.location = ('file:///Users/natashadunaeva/Desktop/tulers/day1_Home.html')
-	})
-
-
-
-	// // <!-- The Modal by Style-->
-
-	const circle = document.querySelector('.circle')
-	const winmodal = document.querySelector('.winmodal')
-	const crossbutton = document.querySelector('.crossbutton')
-
-	
-
-	circle.addEventListener('click', function(){
-	const winmodal = document.getElementById('winmodal')
-		winmodal.style.display = 'block'
-	})
-
-	crossbutton.addEventListener('click', function(){
-	const winmodal = document.getElementById('winmodal')
-		winmodal.style.display = 'none'
-	})	
-	
-
-
-
-	// <!-- The Modal by classList-->
-
-	// const circle = document.querySelector('.circle')
-	// const winmodal = document.querySelector('.winmodal')
-	// const crossbutton = document.querySelector('.crossbutton')
-
-	// circle.addEventListener('click', function() {
-	// 	const winmodal = document.getElementById('winmodal')
-	// 	winmodal.classList.add('win_visible')
-	// })
-
-	// crossbutton.addEventListener('click', function(){
-	// 	const winmodal = document.getElementById('winmodal')
-	// 	winmodal.classList.remove('win_visible')
-
-	// })
-
-
-
-
-
-	
-	})
-
+	 close.addEventListener('click', function(){
+	 	winmodal.style.display = 'none'
+	 })
+ })
