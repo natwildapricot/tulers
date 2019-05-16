@@ -7,6 +7,15 @@
     }
 }
 
+@keyframes rotatingEarthReverse {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
 @-webkit-keyframes zoom {
     from {-webkit-transform: scale(0)}
     to {-webkit-transform: scale(1)}
@@ -50,10 +59,19 @@
 	background-position: top right;
 	background-repeat: no-repeat;
 	transition: .5s;
-
-    animation: rotatingEarth 2s linear infinite;
+    
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     animation-play-state: paused;
     animation-direction: normal;
+}
+
+.earth-animation {
+    animation-name: rotatingEarth;
+}
+.earth-animation-reverse {
+    animation-name: rotatingEarthReverse;
 }
 .controls {
 	height: 200px;

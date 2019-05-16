@@ -17,6 +17,7 @@
 	 let close = document.querySelector('.close')
 	 let pause = document.querySelector('.pause')
 
+	 let animationPlayState = getComputedStyle(myCoolEarth).animationPlayState
 
 	 const homeBtn = document.querySelector('.home')
 	 homeBtn.addEventListener('click', function(){
@@ -24,27 +25,34 @@
 	 })
 
 	 leftArrow.addEventListener('click', function(){
-	 	let currentAnimationPlayStatus = myCoolEarth.style.animationPlayState
-	 	if(currentAnimationPlayStatus != 'running') {
-	 		myCoolEarth.style.animationPlayState = 'running'
-	 		myCoolEarth.style.animationDirection = 'normal'
+	 	if(animationPlayState != 'running') {
+	 		animationPlayState = 'running'
+	 		myCoolEarth.style.animationPlayState = animationPlayState
+	 		myCoolEarth.classList.remove('earth-animation-reverse')
+	 		myCoolEarth.classList.add('earth-animation')
 		this.style.backgroundImage = 'url("img/pause.png")'
 	} else {
-		myCoolEarth.style.animationPlayState = 'paused'
+		animationPlayState = 'paused'
 		this.style.backgroundImage = 'url("img/rotate_left_arrow.png")'
+	 	myCoolEarth.style.animationPlayState = animationPlayState
+
+
 	}
 	})
 
 	 rightArrow.addEventListener('click', function(){
-	 	let currentAnimationDirection = 'reverse'
-	 	let currentAnimationPlayStatus = myCoolEarth.style.animationPlayState
-	 	if(currentAnimationPlayStatus != 'running') {
-	 		myCoolEarth.style.animationPlayState = 'running'
-	 		myCoolEarth.style.animationDirection = 'reverse'
-		rightArrow.style.backgroundImage = 'url("img/pause.png")'
+	 if(animationPlayState != 'running') {
+	 		animationPlayState = 'running'
+	 		myCoolEarth.style.animationPlayState = animationPlayState
+	 		myCoolEarth.classList.remove('earth-animation')
+	 		myCoolEarth.classList.add('earth-animation-reverse')
+		this.style.backgroundImage = 'url("img/pause.png")'
 	} else {
-		myCoolEarth.style.animationPlayState = 'paused'
-		rightArrow.style.backgroundImage = 'url("img/rotate_right_arrow.png")'
+		animationPlayState = 'paused'
+		this.style.backgroundImage = 'url("img/rotate_right_arrow.png")'
+	 	myCoolEarth.style.animationPlayState = animationPlayState
+
+
 	}
 	})
 	 
