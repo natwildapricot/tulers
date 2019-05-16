@@ -7,14 +7,6 @@
     }
 }
 
-@-webkit-keyframes rotatingEarth {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
 @-webkit-keyframes zoom {
     from {-webkit-transform: scale(0)}
     to {-webkit-transform: scale(1)}
@@ -61,6 +53,7 @@
 
     animation: rotatingEarth 2s linear infinite;
     animation-play-state: paused;
+    animation-direction: normal;
 }
 .controls {
 	height: 200px;
@@ -74,6 +67,7 @@
 .circle,
 .pause,
 .leftArrow,
+.rightArrow,
 .home {
 	width:100px;
 	height: 100px;
@@ -91,13 +85,16 @@
 .leftArrow {
 	background-image: url('../img/rotate_left_arrow.png');
 }
+
 .home {
 	background-image: url('../img/home_icon.png');
 }
 .pause {
     background-image: url('../img/pause.png');
 }
-
+.rightArrow {
+    background-image: url('../img/rotate_right_arrow.png');
+}
 
 
 
@@ -140,17 +137,6 @@
 }
 
 
-
-/*.close {
-	position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    font-family: sans-serif;
-}*/
 .crossbutton {
 	position: absolute;
     top: 15px;

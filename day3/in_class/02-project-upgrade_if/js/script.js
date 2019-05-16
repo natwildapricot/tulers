@@ -10,6 +10,7 @@
 	 // lavoro codice di progetto
 	 //mettiamo html codice in viriabile "freccia sinistra"
 	 let leftArrow = document.querySelector('.leftArrow')
+	 let rightArrow = document.querySelector('.rightArrow')
 	 let myCoolEarth = document.querySelector('.earth')
 	 let circle = document.querySelector('.circle')
 	 let winmodal = document.querySelector('.winmodal')
@@ -23,13 +24,32 @@
 	 })
 
 	 leftArrow.addEventListener('click', function(){
-		myCoolEarth.style.animationPlayState = 'running'
-		leftArrow.style.backgroundImage = 'url("img/rotate_left_arrow.png")'
-		
-	})
-	 pause.addEventListener('click', function(){
+	 	let currentAnimationPlayStatus = myCoolEarth.style.animationPlayState
+	 	if(currentAnimationPlayStatus != 'running') {
+	 		myCoolEarth.style.animationPlayState = 'running'
+	 		myCoolEarth.style.animationDirection = 'normal'
+		this.style.backgroundImage = 'url("img/pause.png")'
+	} else {
 		myCoolEarth.style.animationPlayState = 'paused'
-	 })
+		this.style.backgroundImage = 'url("img/rotate_left_arrow.png")'
+	}
+	})
+
+	 rightArrow.addEventListener('click', function(){
+	 	let currentAnimationDirection = 'reverse'
+	 	let currentAnimationPlayStatus = myCoolEarth.style.animationPlayState
+	 	if(currentAnimationPlayStatus != 'running') {
+	 		myCoolEarth.style.animationPlayState = 'running'
+	 		myCoolEarth.style.animationDirection = 'reverse'
+		rightArrow.style.backgroundImage = 'url("img/pause.png")'
+	} else {
+		myCoolEarth.style.animationPlayState = 'paused'
+		rightArrow.style.backgroundImage = 'url("img/rotate_right_arrow.png")'
+	}
+	})
+	 
+	 
+	 
 	 circle.addEventListener('click', function(){
 	 	winmodal.style.display = 'block'
 	 })
